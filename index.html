@@ -7,31 +7,15 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-        }
-        
-        .main-container {
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
             background: url('ocean-background.webp') no-repeat center center;
             background-size: cover;
-        }
-
-        .content-box {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 800px;
-            background-color: rgba(211, 211, 211, 0.9);
-            padding: 20px;
-            min-height: 400px;
+            min-height: 100vh;
         }
         
         .navigation {
-            width: 100%;
             background-color: black;
+            padding: 0;
+            margin: 0;
         }
         
         .navigation ul {
@@ -39,23 +23,49 @@
             padding: 0;
             margin: 0;
             display: flex;
-            background-color: black;
         }
         
         .navigation li {
             padding: 15px 30px;
             color: white;
             cursor: pointer;
-            font-family: Arial, sans-serif;
         }
         
         .navigation li:hover {
             background-color: orange;
         }
 
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+
+        .content-box {
+            background-color: #D3D3D3;
+            padding: 20px;
+            width: 60%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .white-box {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .profile-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
         .button-container {
             text-align: center;
-            margin: 20px 0;
         }
         
         .orange-button {
@@ -80,60 +90,46 @@
             z-index: 1000;
         }
 
-        .footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+        h2 {
+            margin-top: 0;
         }
 
-        .assignment1-box {
-            background-color: white;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 5px;
+        h3 {
+            margin: 10px 0 5px 0;
+        }
+
+        p {
+            margin: 5px 0;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <div class="main-container">
-        <nav class="navigation">
-            <ul>
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>BOOK</li>
-                <li>CONTACT</li>
-            </ul>
-        </nav>
-        
+    <nav class="navigation">
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>BOOK</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+    
+    <div class="container">
         <div class="content-box">
-            <div class="assignment1-box">
+            <div class="white-box">
                 <h2>Assignment 1</h2>
-                <div class="profile-section">
-                    <img src="profile-image.jpg" alt="Profile Image" class="profile-image">
-                    <div class="profile-info">
-                        <h3>Dr. Carelicha Duckworth</h3>
-                        <p>Information Technology Professional</p>
-                    </div>
-                </div>
+                <img src="profile-image.jpg" alt="Profile Image" class="profile-image">
+                <h3>Dr. Carelicha Duckworth</h3>
+                <p>Information Technology Professional</p>
             </div>
-
-            <div class="button-container">
-                <button class="orange-button" onclick="showPopup()">Click Me</button>
-            </div>
+            
+            <button class="orange-button" onclick="showPopup()">Click Me</button>
             
             <div id="popup" class="popup">
                 <p>This is a popup message!</p>
                 <button onclick="hidePopup()">Close</button>
             </div>
         </div>
-
-        <footer class="footer">
-            Study button, input form and headline elements
-        </footer>
     </div>
 
     <script>
