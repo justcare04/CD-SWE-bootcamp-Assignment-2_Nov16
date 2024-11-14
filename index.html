@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SE Boot Camp Assignments</title>
+    <title>SE Boot Camp Assignment 2</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background: url('ocean-background.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
         
         .header {
-            background-color: #333;
+            background-color: black;
             color: white;
             text-align: center;
             padding: 1rem;
         }
         
         .navigation {
-            background-color: #f4f4f4;
+            background-color: black;
             padding: 0;
             margin: 0;
         }
@@ -27,11 +29,10 @@
             padding: 0;
             margin: 0;
             display: flex;
-            background-color: #444;
         }
         
         .navigation li {
-            padding: 15px 20px;
+            padding: 15px 30px;
             color: white;
             cursor: pointer;
             transition: background-color 0.3s;
@@ -42,7 +43,10 @@
         }
         
         .content {
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
         }
         
         .button-container {
@@ -69,27 +73,13 @@
             padding: 20px;
             border: 1px solid #ccc;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
         }
 
         .assignment1 {
             margin-top: 40px;
             padding: 20px;
             background-color: #f9f9f9;
-        }
-
-        .video-links {
-            margin-top: 20px;
-        }
-
-        .video-links a {
-            display: block;
-            margin: 10px 0;
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        .video-links a:hover {
-            text-decoration: underline;
         }
 
         .profile-section {
@@ -109,39 +99,35 @@
         .profile-info {
             flex: 1;
         }
+
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>SE Boot Camp Assignments</h1>
-    </div>
-    
     <nav class="navigation">
         <ul>
-            <li>Home</li>
-            <li>Products</li>
-            <li>Company</li>
-            <li>Contact</li>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>BOOK</li>
+            <li>CONTACT</li>
         </ul>
     </nav>
     
     <div class="content">
-        <h2>Assignment 2</h2>
-        <div class="button-container">
-            <button class="orange-button" onclick="showPopup()">Click Me</button>
-        </div>
-        
-        <div id="popup" class="popup">
-            <p>This is a popup message!</p>
-            <button onclick="hidePopup()">Close</button>
-        </div>
-
         <div class="assignment1">
             <h2>Assignment 1</h2>
             <div class="profile-section">
                 <img src="profile-image.jpg" alt="Profile Image" class="profile-image">
                 <div class="profile-info">
-                    <h3>Dr.Carelicha Duckworth</h3>
+                    <h3>Dr. Carelicha Duckworth</h3>
                     <p>Information Technology Professional</p>
                 </div>
             </div>
@@ -153,7 +139,20 @@
                 <a href="https://youtu.be/5k24We8pED8" target="_blank">Cybersecurity and crime</a>
             </div>
         </div>
+
+        <div class="button-container">
+            <button class="orange-button" onclick="showPopup()">Click Me</button>
+        </div>
+        
+        <div id="popup" class="popup">
+            <p>This is a popup message!</p>
+            <button onclick="hidePopup()">Close</button>
+        </div>
     </div>
+
+    <footer class="footer">
+        Study button, input form and headline elements
+    </footer>
 
     <script>
         function showPopup() {
