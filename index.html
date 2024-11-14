@@ -7,21 +7,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: url('ocean-background.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-        
-        .header {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        
-        .navigation {
-            background-color: black;
-            padding: 0;
-            margin: 0;
+            background-color: white;
         }
         
         .navigation ul {
@@ -29,13 +15,14 @@
             padding: 0;
             margin: 0;
             display: flex;
+            background-color: black;
         }
         
         .navigation li {
             padding: 15px 30px;
             color: white;
+            font-family: Arial, sans-serif;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
         
         .navigation li:hover {
@@ -46,7 +33,7 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
         }
         
         .button-container {
@@ -79,12 +66,13 @@
         .assignment1 {
             margin-top: 40px;
             padding: 20px;
-            background-color: #f9f9f9;
+            text-align: center;
         }
 
         .profile-section {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 20px;
             margin: 20px 0;
         }
@@ -97,17 +85,17 @@
         }
 
         .profile-info {
-            flex: 1;
+            text-align: left;
         }
 
-        .footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .video-links {
+            margin-top: 20px;
+        }
+
+        .video-links a {
+            color: purple;
+            text-decoration: underline;
+            margin: 0 10px;
         }
     </style>
 </head>
@@ -149,10 +137,6 @@
             <button onclick="hidePopup()">Close</button>
         </div>
     </div>
-
-    <footer class="footer">
-        Study button, input form and headline elements
-    </footer>
 
     <script>
         function showPopup() {
